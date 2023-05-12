@@ -12,15 +12,16 @@ pipeline {
       }
    }
 
-   stage('Hello1') {
+  stage('Hello1') {
 
-      steps {
+     steps {
         echo 'Hello World'
     }
   }
 
   stage('Hello2') {
-     steps {
+
+    steps {
         echo 'Hello World'
         mail bcc: '', body: 'Hello this is test mail', cc: '', from: '', replyTo: '', subject: 'test', to: 'manishavguda@gmail.com'
      }
@@ -32,8 +33,6 @@ pipeline {
      always {
        echo "sending email"
      }
-
-
   }
 }
 
