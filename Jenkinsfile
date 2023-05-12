@@ -22,6 +22,7 @@ pipeline {
   stage('Hello2') {
      steps {
         echo 'Hello World'
+        mail bcc: mail bcc: '', body: 'Hello this is test mail', cc: '', from: '', replyTo: '', subject: 'test', to: 'manishavguda@gmail.com'
      }
   }
 
